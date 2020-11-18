@@ -28,23 +28,11 @@ const List = () => {
     });
   }, []);
 
-  const generateRandomColor = () => {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    return `rgb(${r},${g},${b},0.3)`;
-  };
-
   return (
     <ul className="list-container">
       {data.map((item) => (
         <li key={item.id}>
-          <ListItem
-            backgroundColor={generateRandomColor()}
-            id={item.id}
-            listId={item.listId}
-            name={item.name}
-          />
+          <ListItem id={item.id} listId={item.listId} name={item.name} />
         </li>
       ))}
     </ul>

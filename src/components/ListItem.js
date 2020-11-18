@@ -14,10 +14,14 @@ const ListItem = ({ backgroundColor, id, listId, name }) => {
 };
 
 ListItem.propTypes = {
-  backgroundColor: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string,
   id: PropTypes.number.isRequired,
   listId: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired
+};
+
+ListItem.defaultProps = {
+  backgroundColor: 'rgba(12,54,67,.3)'
 };
 
 export default ListItem;

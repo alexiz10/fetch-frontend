@@ -36,17 +36,18 @@ const List = () => {
   };
 
   return (
-    <div className="list-container">
+    <ul className="list-container">
       {data.map((item) => (
-        <ListItem
-          key={item.id}
-          backgroundColor={generateRandomColor()}
-          id={item.id}
-          listId={item.listId}
-          name={item.name}
-        />
+        <li key={item.id}>
+          <ListItem
+            backgroundColor={generateRandomColor()}
+            id={item.id}
+            listId={item.listId}
+            name={item.name}
+          />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
